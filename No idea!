@@ -1,0 +1,22 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+def count_happiness(A, B, arr):
+    count_hap = 0
+    for a in arr:
+        if a in A:
+            count_hap += 1
+        elif a in B:
+            count_hap -= 1
+        else:
+            continue
+    return count_hap
+if __name__ == "__main__":
+    n, m= map(int, input().split(" "))
+    arr = input().split()
+    arr = [int(x) for x in arr] 
+    ls1 = input().split()
+    ls2 = input().split()
+    A = {int(x) for x in ls1}
+    B = {int(y) for y in ls2}
+    print(count_happiness(A, B , arr))
+
+
