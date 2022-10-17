@@ -1,0 +1,7 @@
+def div_oper(a, b):
+    print(a//b)
+    print(float(a)/b)
+if __name__ == '__main__':
+    a = int(input())
+    b = int(input())
+    div_oper(a, b)
