@@ -1,0 +1,45 @@
+
+class lstCont:
+    def __init__(self):
+        self.__lst_c = []
+    def append_s(self, item):
+        self.__lst_c.append(item)
+    def pop_s(self):
+        self.__lst_c.pop()
+    def insert_s(self, ind, item):
+        self.__lst_c.insert(ind, item)
+    def sort_s(self):
+        self.__lst_c.sort()
+    def remove_s(self, item):
+        self.__lst_c.remove(item)
+    def reverse_s(self):
+        self.__lst_c = self.__lst_c[::-1]
+
+    def print_s(self):
+        return self.__lst_c
+            
+if __name__ == '__main__':
+    N = int(input())
+    lst = lstCont()
+    for i in range(N):
+        cmd_cont = input()
+        if len(cmd_cont.split(" ")) == 1:
+            if cmd_cont == "print":
+                print(lst.print_s())
+            elif cmd_cont == "sort":
+                lst.sort_s()
+            elif cmd_cont == "pop":
+                lst.pop_s()
+            elif cmd_cont == "reverse":
+                lst.reverse_s()
+        else:
+            if cmd_cont.split(" ")[0] == "insert":
+                lst.insert_s(int(cmd_cont.split(" ")[1]), int(cmd_cont.split(" ")[2]))
+            elif cmd_cont.split(" ")[0] == "remove":
+                lst.remove_s(int(cmd_cont.split(" ")[1]))
+            elif cmd_cont.split(" ")[0] == "append":
+                lst.append_s(int(cmd_cont.split(" ")[1]))
+                cmd_cont.split(" ")
+
+
+        
