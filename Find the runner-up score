@@ -1,0 +1,21 @@
+def runner_up(arr):
+    for i in range(len(arr)):
+        for j in range(i):
+            if arr[i] < arr[j]:
+                arr[i] , arr[j] = arr[j] , arr[i]
+    n = len(arr) - 1
+    not_found = True
+    while not_found:
+        
+        if arr[n] != arr[n-1]:
+            num = arr[n-1]
+            break
+        n -= 1
+    return num
+        
+    return num
+if __name__ == '__main__':
+    n = int(input())
+    arr =input().split()
+    arr = [int(x) for x in arr]
+    print(runner_up(arr))
